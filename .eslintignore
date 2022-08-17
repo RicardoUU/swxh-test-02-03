@@ -11,7 +11,7 @@ dist
 .husky
 .local
 /bin
-.eslintrc.js
-prettier.config.js
+# .eslintrc.js
+# prettier.config.js
 /src/mock/*
 /lib

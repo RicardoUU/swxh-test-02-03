@@ -1,16 +1,39 @@
 {
   "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
     "target": "esnext",
+    "outDir": "lib",
+    "declaration": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "declaration": true,
-    "declarationDir": "lib"
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+
+
   },
-  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"]
+  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "lib",
+    "esm",
+    "es",
+  ],
+  "compileOnSave": false
 }

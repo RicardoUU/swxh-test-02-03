@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import Custom from '../packages';
+import RDesign from '../packages/index-lib';
 
 const app = createApp(App);
-app.use(Custom);
+app.use(RDesign);
 
 app.mount('#app');

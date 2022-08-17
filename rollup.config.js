@@ -3,7 +3,7 @@ import babel from '@rollup/plugin-babel';
 import { name } from './package.json';
 
 export default {
-  input: './packages/index.tsx',
+  input: './packages/index-lib.ts',
   output: {
     name,
     dir: 'lib',

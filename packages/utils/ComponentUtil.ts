@@ -1,14 +1,11 @@
-import { App, Plugin } from 'vue';
+import { App, Plugin, Component } from 'vue';
 
-const withInstall = <T>(comp: T): T & Plugin => {
-  const c = comp as any;
-  c.install = function(app: App) {
-    app.component(c.name, comp);
+export const withInstall = <T>(comp: T, alias?: string): T & Plugin => {
+  const componentPlugin = comp as T & Component & Plugin;
+
+  componentPlugin.install = (app: App, name?: string) => {
+    app.component(alias || name || componentPlugin.name, comp);
   };
 
-  return comp as T & Plugin;
-};
-
-export default {
-  withInstall
+  return componentPlugin as T & Plugin;
 };
